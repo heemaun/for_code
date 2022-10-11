@@ -1,0 +1,108 @@
+body {
+  width: 100%;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+body header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rem;
+  left: 0rem;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0rem .5rem;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+body header nav h1 {
+  color: gold;
+  cursor: pointer;
+}
+
+body header nav h1 span {
+  color: red;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0rem;
+  margin: 0rem;
+  margin-right: 20%;
+}
+
+body header nav ul li {
+  padding: 0rem 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body header nav ul li:hover {
+  color: gray;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body .hero {
+  width: 100%;
+  height: 100vh;
+}
+
+body .hero .hero-img {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  background: url("/images/user_picture.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  z-index: -100;
+}
+
+body .hero .hero-img-first {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+body .hero h2, body .hero a {
+  -webkit-transition: all 5s;
+  transition: all 5s;
+  margin: 0rem;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+body .hero .hide {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */
