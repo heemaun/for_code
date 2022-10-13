@@ -1,42 +1,52 @@
-body{
-    width: 100%;
+body {
+    // width: 100%;
     padding: 0rem;
     margin: 0rem;
 
-    header{
-        position: sticky;
+    header {
+        position: fixed;
         top: 0rem;
         left: 0rem;
-        // width: 100%;
+        width: 100%;
         background: rgba($color: #000000, $alpha: .25);
-        padding: 0rem .5rem;
+        z-index: 100;
 
-        nav{
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: .5rem;
             color: white;
+            // width: 100%;
 
             h1 {
                 color: gold;
+                margin: 0rem;
+                padding: 0rem;
                 cursor: pointer;
 
-                &:hover{
-                }
+                &:hover {}
 
                 span {
                     color: red;
                 }
             }
 
-            ul{
+            ul {
+                position: absolute;
+                top: 2.7rem;
+                left: 0rem;
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-end;
+                flex-flow: column;
                 list-style: none;
                 padding: 0rem;
                 margin: 0rem;
-                margin-right: 20%;
+                transform: translateY(-133px);
+                background: rgba($color: #000000, $alpha: .25);
+                transition: all 1s;
 
                 li {
                     padding: 0rem 1rem;
@@ -50,42 +60,171 @@ body{
                     }
                 }
             }
+
+            .ul-show {
+                transform: translateY(0px);
+                transition: all 1s;
+            }
+
+            svg {
+                // margin-right: .5rem;
+            }
         }
     }
 
-    .hero{
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        border-bottom: .1rem solid gold;
+
+        h2 {
+            margin: 0rem;
+            padding: 0rem;
+        }
+    }
+
+    .hero-img {
+        min-width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        background: url('/images/user_picture.jpg');
+        background-position-x: 65%;
+        background-position-y: 20%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateX(-100%);
+        transition: all 3s;
+        z-index: -100;
+        // overflow-x: hidden;
+    }
+
+    .hero-img-first {
+        transform: translateX(-50%);
+        transition: all 3s;
+    }
+
+    .hero-img-second {
+        transform: translateX(-30%);
+        transition: all 3.5s;
+    }
+
+    .hero-img-third {
+        transform: translateX(0);
+        transition: all 4s;
+    }
+
+    .hero {
         width: 100%;
         height: 100vh;
 
-        .hero-img{
-            width: 100%;
-            height: 100vh;
-            position: absolute;
+        h2,
+        a {
+            position: relative;
             top: 0rem;
             left: 0rem;
-            background: url('/images/user_picture.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            transform: translateX(100%);
-            z-index: -100;
-        }
-
-        .hero-img-first{
-            transform: translateX(50%);
-            transition: 2s;
-        }
-
-        h2,a {
-            transition: all 5s;
+            transition: all 3s ease-in-out;
             margin: 0rem;
-            transform: translateX(0);
+            padding: .5rem;
+            background: rgba($color: #ffffff, $alpha: .25);
+            box-shadow: .5rem .5rem .5rem black;
+
+            .name-first {
+                color: gold;
+                font-weight: 900;
+            }
+
+            .name-second {
+                color: red;
+                font-weight: 900;
+            }
         }
 
-        .hide{
-            transform: translateX(-100%);
-            transition: all 2s;
-            display: none;
+        .learn-more {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+
+            svg {
+                margin-left: .5rem;
+                font-size: 1rem;
+            }
+        }
+
+        .hide {
+            transition: all 3s ease-in-out;
+            transform: translateX(-1200px);
         }
     }
 
+    .services {
+        color: gold;
+        background: black;
+        max-width: 100%;
+        max-height: auto;
+
+        h2 {
+            margin: .5rem 0rem;
+        }
+
+        .items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            max-width: 100%;
+            max-height: auto;
+
+            .card {
+                width: auto;
+                max-height: auto;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                padding: .5rem;
+                margin: .5rem;
+                border: .1rem solid gray;
+                border-radius: .5rem;
+                box-shadow: .125rem .125rem .5rem gray;
+                transform: translateX(-1200px);
+                transition: all 1s;
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: .5rem;
+                    margin-bottom: .5rem;
+                }
+
+                h3{
+                    margin: 0rem;
+                }
+
+                p{
+                    margin: 0rem;
+                }
+            }
+
+            .show{
+                transform: translateX(0);
+
+                &:nth-child(1){
+                    transition: all 1s;
+                }
+
+                &:nth-child(2){
+                    transition: all 2s;
+                }
+
+                &:nth-child(3){
+                    transition: all 3s;
+                }
+
+            }
+        }
+    }
 }
