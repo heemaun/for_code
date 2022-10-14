@@ -58,19 +58,20 @@
             </div>
         </div>
     </section>
-    {{-- <section class="portfolio">
+    <section class="portfolio">
+        <h2>Portfolio</h2>
         <div class="card">
+            <img src="{{ asset('images/portfolio.JPG') }}" alt="">
             <h3>Hostel Management System</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quaerat.</p>
-            <img src="{{ asset('images/portfolio.JPG') }}" alt="">
         </div>
         <div class="card">
+            <img src="{{ asset('images/portfolio_2.JPG') }}" alt="">
             <h3>Shop Management System</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quaerat.</p>
-            <img src="{{ asset('images/portfolio_2.JPG') }}" alt="">
         </div>
     </section>
-    <section class="about">
+    {{-- <section class="about">
         <div class="first">
             <img src="{{ asset('images/about.jpg') }}" alt="">
             <h3>You wanna know about me!!</h3>
@@ -93,8 +94,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque repellat molestiae sint, animi
                 officia.</p>
         </div>
-    </section>
-    <section class="contact">
+    </section> --}}
+    {{-- <section class="contact">
         <form action="">
             <div class="fields">
                 <div class="left">
@@ -114,6 +115,10 @@
             </div>
         </form>
     </section> --}}
+    <div class="portfolio-img-div hide" id="portfolio-img-div">
+        <span id="portfolio-img-div-close"><i class="fa-regular fa-rectangle-xmark"></i></span>
+        <img src="{{asset('images/thank_you.jpg')}}" alt="portfolio-image" id="portfolio-img">
+    </div>
     @if (Session::has('massage_sent'))
         <div class="message-sent">
             <div class="first">
