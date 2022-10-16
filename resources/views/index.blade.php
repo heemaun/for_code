@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <h1>Zamans' <span>Corp</span></h1>
+            <h1 class="nav-h1">Zamans' <span>Corp</span></h1>
             <ul id="nav-ul">
                 <li id="home">Home</li>
                 <li id="services">Services</li>
@@ -41,17 +41,17 @@
     <section class="services">
         <h2>Services</h2>
         <div class="items">
-            <div class="card">
+            <div class="item">
                 <img src="{{ asset('images/web_app.jpg') }}" alt="web app">
                 <h3 class="title">Web Applications</h3>
                 <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, est.</p>
             </div>
-            <div class="card">
+            <div class="item">
                 <img src="{{ asset('images/responsive_design.jpg') }}" alt="web app">
                 <h3 class="title">Responsive Design</h3>
                 <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, est.</p>
             </div>
-            <div class="card">
+            <div class="item">
                 <img src="{{ asset('images/autocad_design.jpg') }}" alt="web app">
                 <h3 class="title">Autocad Drawing</h3>
                 <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, est.</p>
@@ -60,61 +60,46 @@
     </section>
     <section class="portfolio">
         <h2>Portfolio</h2>
-        <div class="card">
+        <div class="item">
             <img src="{{ asset('images/portfolio.JPG') }}" alt="">
             <h3>Hostel Management System</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quaerat.</p>
         </div>
-        <div class="card">
+        <div class="item">
             <img src="{{ asset('images/portfolio_2.JPG') }}" alt="">
             <h3>Shop Management System</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quaerat.</p>
         </div>
     </section>
-    {{-- <section class="about">
-        <div class="first">
+    <section class="about">
+        <h2>About</h2>
+        <div class="items about-hide-right" id="item">
             <img src="{{ asset('images/about.jpg') }}" alt="">
             <h3>You wanna know about me!!</h3>
+            <p></p>
+            <button id="about-btn" data-href="0">Yes</button>
         </div>
-        <div class="second">
-            <img src="{{ asset('images/start.jpg') }}" alt="">
-            <h3>Start</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque repellat molestiae sint, animi
-                officia.</p>
-        </div>
-        <div class="third">
-            <img src="{{ asset('images/start.jpg') }}" alt="">
-            <h3>Then</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque repellat molestiae sint, animi
-                officia.</p>
-        </div>
-        <div class="forth">
-            <img src="{{ asset('images/start.jpg') }}" alt="">
-            <h3>Now</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut doloremque repellat molestiae sint, animi
-                officia.</p>
-        </div>
-    </section> --}}
-    {{-- <section class="contact">
+    </section>
+    <section class="contacts">
         <form action="">
             <div class="fields">
-                <div class="left">
-                    <label for="">Name</label>
-                    <input type="text" name="name">
-                    <label for="">Phone</label>
-                    <input type="phone" name="phone">
-                    <label for="">Email</label>
-                    <input type="email" name="email">
-                </div>
-                <div class="right">
-                    <textarea name="" id=""></textarea>
-                </div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject">
+                <label for="body">Body</label>
+                <textarea name="body" id="body"></textarea>
             </div>
             <div class="btn-container">
                 <button type="submit">Send</button>
+                <button type="button" id="contacts-clear">Clear</button>
             </div>
         </form>
-    </section> --}}
+    </section>
     <div class="portfolio-img-div hide" id="portfolio-img-div">
         <span id="portfolio-img-div-close"><i class="fa-regular fa-rectangle-xmark"></i></span>
         <img src="{{asset('images/thank_you.jpg')}}" alt="portfolio-image" id="portfolio-img">
