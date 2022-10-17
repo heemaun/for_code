@@ -89,6 +89,10 @@ html body header nav .ul-show {
   transition: all 1s;
 }
 
+html body header nav svg {
+  cursor: pointer;
+}
+
 html body section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -490,21 +494,19 @@ html body .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: .5rem;
   min-height: 100vh;
-  background: gold;
-  color: red;
+  background: red;
+  color: gold;
 }
 
 html body .contacts form {
-  width: 90%;
-  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,30 +520,230 @@ html body .contacts form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: .5rem;
-  border: .1rem solid red;
+  padding: 1.5rem;
   border-radius: .5rem;
+  background: black;
+  color: gray;
+  -webkit-box-shadow: .5rem .5rem .5rem gray;
+          box-shadow: .5rem .5rem .5rem gray;
+}
+
+html body .contacts form legend {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
 }
 
 html body .contacts form .fields {
-  width: 90%;
-  border: .1rem solid black;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-html body .contacts form .fields label {
+html body .contacts form .fields .form-group {
+  display: block;
+  background: white;
+  padding: .5rem;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0rem 0rem .5rem gray;
+          box-shadow: 0rem 0rem .5rem gray;
+  margin-bottom: .5rem;
+}
+
+html body .contacts form .fields .form-group i {
+  background: none;
+}
+
+html body .contacts form .fields .form-group input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: .5rem;
+  font-size: 1.2rem;
+}
+
+html body .contacts form .fields textarea {
+  display: block;
+  width: 100%;
+  border-radius: .5rem;
+  height: 33vh;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  -webkit-box-shadow: 0rem 0rem .5rem gray;
+          box-shadow: 0rem 0rem .5rem gray;
+}
+
+html body .contacts form .fields textarea:focus {
+  -webkit-box-shadow: 0rem 0rem .5rem blue;
+          box-shadow: 0rem 0rem .5rem blue;
+}
+
+html body .contacts form .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: .5rem;
+}
+
+html body .contacts form .btn-container button {
+  padding: .5rem 2rem;
+  margin: 0rem .5rem;
   font-size: 1.2rem;
   font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: .5rem;
+  color: gray;
 }
 
-html body .contacts form .fields input {
-  width: 100%;
+html body .contacts form .btn-container button:nth-child(1) {
+  outline: .1rem solid #0275d8;
 }
 
-html body .contacts form .fields input:focus {
-  -webkit-box-shadow: inset 0 0 .5rem blue;
-          box-shadow: inset 0 0 .5rem blue;
+html body .contacts form .btn-container button:nth-child(1):hover {
+  background: #0275d8;
+  color: white;
+}
+
+html body .contacts form .btn-container button:nth-child(1):active {
+  background: #005299;
+}
+
+html body .contacts form .btn-container button:nth-child(2) {
+  outline: .1rem solid #292b2c;
+}
+
+html body .contacts form .btn-container button:nth-child(2):hover {
+  background: #292b2c;
+  color: white;
+}
+
+html body .contacts form .btn-container button:nth-child(2):active {
+  background: #000000;
+}
+
+html body .contacts span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .contacts span i {
+  font-size: xx-large;
+}
+
+html body .contacts .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .contacts .social-icons a {
+  padding: .5rem;
+  margin: 0rem 1rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+html body .contacts .social-icons a:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+html body .contacts .social-icons a:nth-child(1) {
+  background-color: #4267B2;
+  color: white;
+}
+
+html body .contacts .social-icons a:nth-child(2) {
+  background: white;
+  color: #1DA1F2;
+}
+
+html body .contacts .social-icons a:nth-child(3) {
+  background: white;
+  color: #DB4437;
+}
+
+html body .contacts .social-icons a:nth-child(4) {
+  background: white;
+  color: #0A66C2;
+}
+
+html body .contacts .social-icons a:nth-child(5) {
+  background: white;
+  color: #171515;
+}
+
+html body .contacts .social-icons a:nth-child(6) {
+  background: white;
+  color: #ec9410;
+}
+
+html body .contacts .social-icons .social-icons-hide:nth-child(odd) {
+  -webkit-transform: translateX(1200px) rotate(1080deg);
+          transform: translateX(1200px) rotate(1080deg);
+  -webkit-transition: all 3s ease-in-out 2s;
+  transition: all 3s ease-in-out 2s;
+}
+
+html body .contacts .social-icons .social-icons-hide:nth-child(even) {
+  -webkit-transform: translateX(-1200px) rotate(-1080deg);
+          transform: translateX(-1200px) rotate(-1080deg);
+  -webkit-transition: all 3s ease-in-out 2s;
+  transition: all 3s ease-in-out 2s;
 }
 
 html body .portfolio-img-div {

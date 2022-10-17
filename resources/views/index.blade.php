@@ -81,24 +81,30 @@
         </div>
     </section>
     <section class="contacts">
-        <form action="">
+        <h2>Contact Me</h2>
+        <form action="" id="contact-form">
+            <legend>Send me a massage</legend>
             <div class="fields">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-                <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject">
-                <label for="body">Body</label>
-                <textarea name="body" id="body"></textarea>
+                <div class="form-group" id="form-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="enter your name" onfocus="nameFocus()">
+                </div>
+                <textarea name="body" id="body" placeholder="enter your mail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam natus porro facilis iusto a, dolorem aspernatur neque at quis, sint ullam esse perferendis fugit dolore. Ea quae voluptates at ipsum omnis nostrum dolor, recusandae consequatur illum! Voluptatem earum tempore vero aliquid blanditiis quo, reiciendis doloribus. Saepe ea neque praesentium!</textarea>
             </div>
             <div class="btn-container">
                 <button type="submit">Send</button>
                 <button type="button" id="contacts-clear">Clear</button>
             </div>
         </form>
+        <span>Sell also<i class="fa-solid fa-down-long"></i></span>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-stack-overflow"></i></a>
+        </div>
     </section>
     <div class="portfolio-img-div hide" id="portfolio-img-div">
         <span id="portfolio-img-div-close"><i class="fa-regular fa-rectangle-xmark"></i></span>

@@ -88,6 +88,20 @@ $(function(){
     });
 });
 
+$(function(){
+    let top = $(".contacts").offset().top;
+    let bottom = $(".contacts").offset().top + $(".about").height();
+    $(window).scroll(function(){
+        let scroll = $(window).scrollTop()+($(window).height()/2);
+        if(scroll >= top && scroll <= bottom){
+            $(".social-icons a").removeClass("social-icons-hide");
+        }
+        else{
+            $(".social-icons a").addClass("social-icons-hide");
+        }
+    });
+});
+
 $("#about-btn").click(function(){
     let target = $("#item");
     let img = $("#item img");
@@ -198,6 +212,14 @@ $("#contacts").click(function () {
         },
         2000
     );
+});
+
+function nameFocus(){
+    $("#form-group").css("box-shadow","0rem 0rem .5rem blue");
+}
+
+$("#contact-form").on("submit",function(e){
+    e.preventDefault();
 });
 
 $(".portfolio .item img").click(function(){
