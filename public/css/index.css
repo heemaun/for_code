@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 html body {
@@ -30,20 +32,28 @@ html body header nav {
   color: white;
 }
 
-html body header nav h1 {
+html body header nav a {
   color: gold;
   margin: 0rem;
   padding: 0rem;
   cursor: pointer;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
 }
 
-html body header nav h1 span {
+html body header nav a:hover {
+  -webkit-animation: nav_logo 5s ease-in-out .1s 1;
+          animation: nav_logo 5s ease-in-out .1s 1;
+}
+
+html body header nav a span {
   color: red;
 }
 
 html body header nav ul {
   position: absolute;
-  top: 2.7rem;
+  top: 3.2rem;
   left: 0rem;
   width: 100%;
   display: -webkit-box;
@@ -62,8 +72,8 @@ html body header nav ul {
   list-style: none;
   padding: 0rem;
   margin: 0rem;
-  -webkit-transform: translateY(-133px);
-          transform: translateY(-133px);
+  -webkit-transform: translateY(-176px);
+          transform: translateY(-176px);
   background: rgba(0, 0, 0, 0.25);
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -77,9 +87,8 @@ html body header nav ul li {
 }
 
 html body header nav ul li:hover {
-  color: gray;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-animation: nav_ul_li_hover .1s ease-in-out .1s 3 forwards;
+          animation: nav_ul_li_hover .1s ease-in-out .1s 3 forwards;
 }
 
 html body header nav .ul-show {
@@ -91,6 +100,13 @@ html body header nav .ul-show {
 
 html body header nav svg {
   cursor: pointer;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+html body header nav svg:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 html body section {
@@ -188,6 +204,8 @@ html body .hero .learn-more {
 html body .hero .learn-more svg {
   margin-left: .5rem;
   font-size: 1rem;
+  -webkit-animation: learn_more 1s ease-in-out 0s infinite alternate;
+          animation: learn_more 1s ease-in-out 0s infinite alternate;
 }
 
 html body .hero .hide {
@@ -202,6 +220,11 @@ html body .services {
   background: black;
   max-width: 100%;
   max-height: auto;
+}
+
+html body .services h2 {
+  -webkit-transform: skew(90deg, 0deg);
+          transform: skew(90deg, 0deg);
 }
 
 html body .services .items {
@@ -325,6 +348,11 @@ html body .portfolio {
   color: gold;
 }
 
+html body .portfolio h2 {
+  -webkit-transform: skew(90deg, 0deg);
+          transform: skew(90deg, 0deg);
+}
+
 html body .portfolio .item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,15 +424,20 @@ html body .about {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #000000;
   color: gold;
   min-height: 100vh;
+}
+
+html body .about h2 {
+  -webkit-transform: skew(90deg, 0deg);
+          transform: skew(90deg, 0deg);
 }
 
 html body .about .items {
@@ -506,6 +539,11 @@ html body .contacts {
   color: gold;
 }
 
+html body .contacts h2 {
+  -webkit-transform: skew(90deg, 0deg);
+          transform: skew(90deg, 0deg);
+}
+
 html body .contacts form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,6 +570,10 @@ html body .contacts form legend {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: .5rem;
+  -webkit-transform: translateY(-90px);
+          transform: translateY(-90px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 html body .contacts form .fields {
@@ -558,6 +600,10 @@ html body .contacts form .fields .form-group {
   -webkit-box-shadow: 0rem 0rem .5rem gray;
           box-shadow: 0rem 0rem .5rem gray;
   margin-bottom: .5rem;
+  -webkit-transform: translateY(-75px);
+          transform: translateY(-75px);
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
 }
 
 html body .contacts form .fields .form-group i {
@@ -582,6 +628,10 @@ html body .contacts form .fields textarea {
   font-size: 1rem;
   -webkit-box-shadow: 0rem 0rem .5rem gray;
           box-shadow: 0rem 0rem .5rem gray;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: all 1.4s;
+  transition: all 1.4s;
 }
 
 html body .contacts form .fields textarea:focus {
@@ -604,6 +654,10 @@ html body .contacts form .btn-container {
       -ms-flex-align: center;
           align-items: center;
   margin-top: .5rem;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  -webkit-transition: all 1.6s;
+  transition: all 1.6s;
 }
 
 html body .contacts form .btn-container button {
@@ -645,6 +699,34 @@ html body .contacts form .btn-container button:nth-child(2):active {
   background: #000000;
 }
 
+html body .contacts .form-fix legend {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+html body .contacts .form-fix .fields .form-group {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+html body .contacts .form-fix .fields textarea {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 1.4s;
+  transition: all 1.4s;
+}
+
+html body .contacts .form-fix .btn-container {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 1.6s;
+  transition: all 1.6s;
+}
+
 html body .contacts span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,8 +743,10 @@ html body .contacts span {
           align-items: center;
 }
 
-html body .contacts span i {
+html body .contacts span svg {
   font-size: xx-large;
+  -webkit-animation: sell_also 1s ease-in-out 0s infinite alternate;
+          animation: sell_also 1s ease-in-out 0s infinite alternate;
 }
 
 html body .contacts .social-icons {
@@ -693,13 +777,23 @@ html body .contacts .social-icons a {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.2rem;
-  -webkit-transition: all 3s;
-  transition: all 3s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 html body .contacts .social-icons a:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-animation: socials_hover 1s ease-in-out;
+          animation: socials_hover 1s ease-in-out;
+}
+
+html body .contacts .social-icons a:nth-child(odd) {
+  -webkit-transform: translateX(-1200px) rotate(-1080deg);
+          transform: translateX(-1200px) rotate(-1080deg);
+}
+
+html body .contacts .social-icons a:nth-child(even) {
+  -webkit-transform: translateX(1200px) rotate(1080deg);
+          transform: translateX(1200px) rotate(1080deg);
 }
 
 html body .contacts .social-icons a:nth-child(1) {
@@ -733,17 +827,17 @@ html body .contacts .social-icons a:nth-child(6) {
 }
 
 html body .contacts .social-icons .social-icons-hide:nth-child(odd) {
-  -webkit-transform: translateX(1200px) rotate(1080deg);
-          transform: translateX(1200px) rotate(1080deg);
-  -webkit-transition: all 3s ease-in-out 2s;
-  transition: all 3s ease-in-out 2s;
+  -webkit-transform: translateX(0px) rotate(0deg);
+          transform: translateX(0px) rotate(0deg);
+  -webkit-transition: all 3s ease-in-out 1s;
+  transition: all 3s ease-in-out 1s;
 }
 
 html body .contacts .social-icons .social-icons-hide:nth-child(even) {
-  -webkit-transform: translateX(-1200px) rotate(-1080deg);
-          transform: translateX(-1200px) rotate(-1080deg);
-  -webkit-transition: all 3s ease-in-out 2s;
-  transition: all 3s ease-in-out 2s;
+  -webkit-transform: translateX(0px) rotate(0deg);
+          transform: translateX(0px) rotate(0deg);
+  -webkit-transition: all 3s ease-in-out 1s;
+  transition: all 3s ease-in-out 1s;
 }
 
 html body .portfolio-img-div {
@@ -785,5 +879,165 @@ html body .portfolio-img-div span {
 html body .hide {
   opacity: 0;
   z-index: -2000;
+}
+
+@-webkit-keyframes nav_logo {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes nav_logo {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@-webkit-keyframes nav_ul_li_hover {
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: gray;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: white;
+  }
+}
+
+@keyframes nav_ul_li_hover {
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: gray;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: white;
+  }
+}
+
+@-webkit-keyframes learn_more {
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  0% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes learn_more {
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  0% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@-webkit-keyframes section_h2 {
+  100% {
+    -webkit-transform: skew(0deg, 0deg);
+            transform: skew(0deg, 0deg);
+  }
+  0% {
+    -webkit-transform: skew(90deg, 0deg);
+            transform: skew(90deg, 0deg);
+  }
+}
+
+@keyframes section_h2 {
+  100% {
+    -webkit-transform: skew(0deg, 0deg);
+            transform: skew(0deg, 0deg);
+  }
+  0% {
+    -webkit-transform: skew(90deg, 0deg);
+            transform: skew(90deg, 0deg);
+  }
+}
+
+@-webkit-keyframes sell_also {
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes sell_also {
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@-webkit-keyframes socials_hover {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes socials_hover {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 /*# sourceMappingURL=index.css.map */

@@ -35,9 +35,11 @@ $(function(){
         // let scroll = $(window).scrollTop();
         if(scroll >= top && scroll <= bottom){
             $(".item").addClass("show");
+            $(".services h2").css("animation","section_h2 1s ease-in-out .1s 1 forwards");
         }
         else{
             $(".item").removeClass("show");
+            $(".services h2").css("animation","none");
         }
     });
 });
@@ -49,9 +51,11 @@ $(function(){
         let scroll = $(window).scrollTop()+($(window).height()/2);
         // let scroll = $(window).scrollTop();
         if(scroll >= top && scroll <= bottom){
+            $(".portfolio h2").css("animation","section_h2 1s ease-in-out .1s 1 forwards");
             $(".item").addClass("item-show");
         }
         else{
+            $(".portfolio h2").css("animation","none");
             $(".item").removeClass("item-show");
         }
     });
@@ -72,6 +76,7 @@ $(function(){
             // $(".hero-first-msg").removeClass("hide");
             // $(".about .items img").attr("src","/images/start.jpg");
             target.removeClass("about-hide-right");
+            $(".about h2").css("animation","section_h2 1s ease-in-out .1s 1 forwards");
             // target.addClass("about-show");
         }
         else{
@@ -84,6 +89,7 @@ $(function(){
             h3.text("You wanna know about me!!");
             p.text("");
             $("#about-btn").text("Yes");
+            $(".about h2").css("animation","none");
         }
     });
 });
@@ -94,10 +100,14 @@ $(function(){
     $(window).scroll(function(){
         let scroll = $(window).scrollTop()+($(window).height()/2);
         if(scroll >= top && scroll <= bottom){
-            $(".social-icons a").removeClass("social-icons-hide");
+            $(".social-icons a").addClass("social-icons-hide");
+            $(".contacts form").addClass("form-fix");
+            $(".contacts h2").css("animation","section_h2 1s ease-in-out .1s 1 forwards");
         }
         else{
-            $(".social-icons a").addClass("social-icons-hide");
+            $(".social-icons a").removeClass("social-icons-hide");
+            $(".contacts form").removeClass("form-fix");
+            $(".contacts h2").css("animation","none");
         }
     });
 });

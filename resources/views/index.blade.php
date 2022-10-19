@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('css/font-awesome/all.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
 
 <body>
     <header>
         <nav>
-            <h1 class="nav-h1">Zamans' <span>Corp</span></h1>
+            <a href="{{route('home')}}" class="nav-h1">Zamans' <span>Corp</span></a>
             <ul id="nav-ul">
                 <li id="home">Home</li>
                 <li id="services">Services</li>
@@ -35,7 +35,7 @@
         <h2 class="hero-second-msg hide">Welcome to <span class="name-first">Zamans' </span><span
                 class="name-second">Corp</span></h2>
         <a href="#" class="learn-more hide">
-            Learn More<i class="fa-sharp fa-solid fa-chevron-down"></i>
+            Learn More<i class="fa-solid fa-chevron-down"></i>
         </a>
     </section>
     <section class="services">
@@ -123,7 +123,7 @@
     @endif
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/font-awesome/all.min.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('js/index.js') }}"></script>
 </body>
 
