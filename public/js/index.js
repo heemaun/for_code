@@ -1,3 +1,4 @@
+// const { toSafeInteger } = require("lodash");
 $("#ul-toggle").click(function () {
     $("#nav-ul").toggleClass("ul-show");
 });
@@ -245,3 +246,51 @@ $("#portfolio-img-div-close").click(function(){
 //     $(".hero-img").removeClass("hero-img-second");
 //     $(".hero-second-msg").addClass("hide");
 // },18500));
+
+$(".portfolio-img-div").on("scroll",function(){
+    alert("here");
+});
+
+$("#contact-form").on("submit",function(e){
+    e.preventDefault();
+    let name = $("#name").val();
+    let message = $("#message").val();
+
+    $.ajaxSetup({
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
+    });
+
+    $.ajax({
+        url: $(this).attr("action"),
+        type: $(this).attr("method"),
+        dataType: "json",
+        data: {
+            name: name,
+            message: message,
+        },
+        beforeSend: function(){
+            $(".loading").removeClass("loading-hide");
+            $(".error").text("");
+        },
+        success: function(response,status){
+            $(".loading").addClass("loading-hide");
+            if(response.status === "errors"){
+                $.each(response.errors,function(key,value){
+                    $("."+key+"-error").text(value[0]);
+                });
+            }
+            else{
+                toastr.success(response.message);
+                $("#name").val("");
+                $("#message").val("");
+            }
+        }
+    });
+});
+
+$("#contacts-clear").click(function(){
+    $("#name").text("");
+    $("#message").text("");
+});
