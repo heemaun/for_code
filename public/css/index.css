@@ -17,6 +17,8 @@ html body .main-container header {
   width: 100%;
   background: rgba(0, 0, 0, 0.25);
   z-index: 100;
+  -webkit-animation: header_animation 1s ease-in-out 0s 1 forwards;
+          animation: header_animation 1s ease-in-out 0s 1 forwards;
 }
 
 html body .main-container header nav {
@@ -877,25 +879,15 @@ html body .main-container .contacts .social-icons a:nth-child(1) {
 
 html body .main-container .contacts .social-icons a:nth-child(2) {
   background: white;
-  color: #1DA1F2;
+  color: #0A66C2;
 }
 
 html body .main-container .contacts .social-icons a:nth-child(3) {
   background: white;
-  color: #DB4437;
-}
-
-html body .main-container .contacts .social-icons a:nth-child(4) {
-  background: white;
-  color: #0A66C2;
-}
-
-html body .main-container .contacts .social-icons a:nth-child(5) {
-  background: white;
   color: #171515;
 }
 
-html body .main-container .contacts .social-icons a:nth-child(6) {
+html body .main-container .contacts .social-icons a:nth-child(4) {
   background: white;
   color: #ec9410;
 }
@@ -903,15 +895,15 @@ html body .main-container .contacts .social-icons a:nth-child(6) {
 html body .main-container .contacts .social-icons .social-icons-hide:nth-child(odd) {
   -webkit-transform: translateX(0px) rotate(0deg);
           transform: translateX(0px) rotate(0deg);
-  -webkit-transition: all 3s ease-in-out 1s;
-  transition: all 3s ease-in-out 1s;
+  -webkit-transition: all 1s ease-in-out 0s;
+  transition: all 1s ease-in-out 0s;
 }
 
 html body .main-container .contacts .social-icons .social-icons-hide:nth-child(even) {
   -webkit-transform: translateX(0px) rotate(0deg);
           transform: translateX(0px) rotate(0deg);
-  -webkit-transition: all 3s ease-in-out 1s;
-  transition: all 3s ease-in-out 1s;
+  -webkit-transition: all 1s ease-in-out 0s;
+  transition: all 1s ease-in-out 0s;
 }
 
 html body .main-container .portfolio-img-div {
@@ -955,6 +947,36 @@ html body .main-container .hide {
   z-index: -2000;
 }
 
+html body .fixed-icons {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .fixed-icons a {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  outline: none;
+  background: red;
+  border-radius: 50%;
+}
+
 html body .loading {
   position: fixed;
   top: 0;
@@ -994,6 +1016,28 @@ html body .loading-hide {
 html body .loading-hide::after {
   -webkit-animation: none;
           animation: none;
+}
+
+@-webkit-keyframes header_animation {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes header_animation {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 @-webkit-keyframes nav_logo {
