@@ -99,8 +99,9 @@ $(function(){
     let top = $(".contacts").offset().top;
     let bottom = $(".contacts").offset().top + $(".about").height();
     $(window).scroll(function(){
-        let scroll = $(window).scrollTop()+($(window).height()/2);
-        if(scroll >= top && scroll <= bottom){
+        let scroll = $(window).scrollTop();
+        // let scroll = $(window).scrollTop();
+        if(scroll >= top){
             $(".social-icons a").addClass("social-icons-hide");
             $(".contacts form").addClass("form-fix");
             $(".contacts h2").css("animation","section_h2 1s ease-in-out .1s 1 forwards");
@@ -169,6 +170,26 @@ $("#about-btn").click(function(){
         // },2000);
         // $(this).text("Next");
     }
+});
+
+$("#phone-a, #phone-span").on("mouseover",function(e){
+    $("#phone-a").addClass("hover-a");
+    $("#phone-span").addClass("hover-span");
+});
+
+$("#phone-a, #phone-span").on("mouseout",function(e){
+    $("#phone-a").removeClass("hover-a");
+    $("#phone-span").removeClass("hover-span");
+});
+
+$("#mail-a, #mail-span").on("mouseover",function(e){
+    $("#mail-a").addClass("hover-a");
+    $("#mail-span").addClass("hover-span");
+});
+
+$("#mail-a, #mail-span").on("mouseout",function(e){
+    $("#mail-a").removeClass("hover-a");
+    $("#mail-span").removeClass("hover-span");
 });
 
 $(".learn-more").click(function () {

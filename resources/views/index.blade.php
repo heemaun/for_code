@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Document</title>
+    <title>Zamans' Corp</title>
+    <link rel="shortcut icon" type="image"  href="{{ asset('images/title.png') }}">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -110,8 +111,6 @@
             </form>
             <span>See also<i class="fa-solid fa-down-long"></i></span>
             <div class="social-icons">
-                {{-- <a target="_black" data-tooltip="+8801751430596" href="tel:+8801751430596"><i class="fa-solid fa-phone"></i></a>
-                <a target="_black" data-tooltip="heemaun@gmail.com" href="mailto:heemaun@gmail.com" title="heemaun@gmail.com"><i class="fa-solid fa-envelope"></i></a> --}}
                 <a target="_black" href="https://www.facebook.com/heemaun"><i class="fa-brands fa-facebook-f"></i></a>
                 <a target="_black" href="https://www.linkedin.com/in/heemaun/"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a target="_black" href="https://github.com/heemaun"><i class="fa-brands fa-github"></i></a>
@@ -120,22 +119,28 @@
         </section>
         <div class="portfolio-img-div hide" id="portfolio-img-div">
             <span id="portfolio-img-div-close"><i class="fa-regular fa-rectangle-xmark"></i></span>
-            <img src="{{ asset('images/thank_you.jpg') }}" alt="portfolio-image" id="portfolio-img">
+            <img src="" alt="portfolio-image" id="portfolio-img">
         </div>
     </div>
     <div class="loading loading-hide"></div>
     <div class="fixed-icons">
-        <a target="_black" data-tooltip="+8801751430596" href="tel:+8801751430596"><i class="fa-solid fa-phone"></i></a>
-        <a target="_black" data-tooltip="heemaun@gmail.com" href="mailto:heemaun@gmail.com" title="heemaun@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <div class="container">
+            <span id="phone-span">+8801751430596</span>
+            <a id="phone-a" target="_black" data-tooltip="+8801751430596" href="tel:+8801751430596"><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <div class="container">
+            <span id="mail-span">heemaun@gmail.com</span>
+            <a id="mail-a" target="_black" data-tooltip="heemaun@gmail.com" href="mailto:heemaun@gmail.com" title="heemaun@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
     </div>
     @if (Session::has('massage_sent'))
         <div class="message-sent">
             <div class="first">
-                <img src="{{ asset('images/message_sent.jpg') }}" alt="">
+                {{-- <img src="{{ asset('images/message_sent.jpg') }}" alt=""> --}}
                 <h2>You've sent me a message! WOW!</h2>
             </div>
             <div class="second">
-                <img src="{{ asset('images/thank_you.jpg') }}" alt="">
+                {{-- <img src="{{ asset('images/thank_you.jpg') }}" alt=""> --}}
             </div>
         </div>
     @endif
