@@ -137,7 +137,7 @@
         <div class="message-sent">
             <div class="first">
                 {{-- <img src="{{ asset('images/message_sent.jpg') }}" alt=""> --}}
-                <h2>You've sent me a message! WOW!</h2>
+                {{-- <h2>You've sent me a message! WOW!</h2> --}}
             </div>
             <div class="second">
                 {{-- <img src="{{ asset('images/thank_you.jpg') }}" alt=""> --}}
